@@ -7,8 +7,8 @@ interface Users{
         city:string
     }
 }
-function MappedUser({name,address,email}:Users){
-    return <div className="p-6 border-blue-800 border-[2px] w-[300px] bg-blue-300">
+function MappedUser({id,name,address,email}:Users){
+    return <div key={id} className="p-6 border-blue-800 border-[2px] w-[300px] bg-blue-300">
     {name}<br></br> {address.city} <div className="text-[19px]">{email}</div></div>
 }
 
