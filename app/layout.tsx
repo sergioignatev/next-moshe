@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { Drawer } from './ui/drawer'
 import Link from 'next/link'
+import { Footer } from './ui/footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,9 @@ export default function RootLayout({
      
     <Link href="users">USERS</Link>
      </></Drawer>
-      
+    
+      <Footer/>
+ 
       </body>
 
     </html>
