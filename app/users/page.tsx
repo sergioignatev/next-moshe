@@ -7,17 +7,16 @@ interface Users{
         city:string
     }
 }
-function MappedUser({name,address,email}:Users){
-    return <div  className="p-6 border-blue-800 border-[2px] w-[300px] bg-blue-300">
-    {name}<br></br> {address.city} <div className="text-[19px]">{email}</div></div>
-}
+
 
 const  User= async()=>{
     const res= await fetch('https://jsonplaceholder.typicode.com/users')
     const users:Users[] = await res.json()
     return <div className="text-center ">
 <h1 className="text-center">USERS</h1>
-<h2 className="flex flex-wrap gap-[10px]">{users.map(user=><MappedUser key={user.id} {...user}/>)}</h2>
+<div className="flex flex-wrap gap-[10px]">
+    {users.map(u=><div className="bg-blue p-6" key={u.id}>{u.name}</div>)}
+</div>
 </div>
 }
 export default User
