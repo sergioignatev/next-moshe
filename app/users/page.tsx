@@ -15,7 +15,10 @@ function MappedUser({name,address,email}:Users){
 const  User= async()=>{
     const res= await fetch('https://jsonplaceholder.typicode.com/users',{cache:'no-cache'})
     const users:Users[] = await res.json()
-    return <div className="text-center ">
+    return <div className="text-center p-6 " >
+        <thead>
+            <tr></tr>
+        </thead>
 <h1 className="text-center">USERS</h1>
 <p>{new Date().toLocaleTimeString()}</p>
 <h2 className="flex flex-wrap gap-[10px]">{users.map(user=><MappedUser key={user.id} {...user}/>)}</h2>
