@@ -1,4 +1,12 @@
+
+import { Button } from "./button"
+
 const  User=()=>{
-    return <h1>Hello world and users</h1>
+    return <>
+   <Button
+   name="CLICK"
+
+/>
+    <h1>Hello woarld and users</h1></>
 }
 export default User
