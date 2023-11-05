@@ -8,7 +8,7 @@ interface Users{
     }
 }
 function MappedUser({name,address,email}:Users){
-    return <div  className="p-6 border-blue-800 border-[2px] w-[300px] bg-blue-300">
+    return <div  className="px-6 py-[100px] border-blue-800 border-[2px] min-w-fit w-[200px] bg-blue-300">
     {name}<br></br> {address.city} <div className="text-[19px]">{email}</div></div>
 }
 
