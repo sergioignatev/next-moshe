@@ -1,12 +1,23 @@
 
-import { Button } from "./button"
+interface Users{
+    id:number,
+    name:string,
+    email:string,
+    address:{
+        city:string
+    }
+}
+function MappedUser({name,address,email}:Users){
+    return <div className="p-6 border-blue-800 border-[2px] w-[300px] bg-blue-300">
+    {name}<br></br> {address.city} <div className="text-[19px]">{email}</div></div>
+}
 
-const  User=()=>{
-    return <>
-   <Button
-   name="CLICK"
-
-/>
-    <h1>Hello woarld and users</h1></>
+const  User= async()=>{
+    const res= await fetch('https://jsonplaceholder.typicode.com/users')
+    const users:Users[] = await res.json()
+    return <div className="text-center ">
+<h1 className="text-center">USERS</h1>
+<h2 className="flex flex-wrap gap-[10px]">{users.map(user=><MappedUser {...user}/>)}</h2>
+</div>
 }
 export default User
