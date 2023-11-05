@@ -13,7 +13,7 @@ function MappedUser({name,address,email}:Users){
 }
 
 const  User= async()=>{
-    const res= await fetch('https://jsonplaceholder.typicode.com/users',{cache:'no-storegit add -A'})
+    const res= await fetch('https://jsonplaceholder.typicode.com/users',{cache:'no-cache'})
     const users:Users[] = await res.json()
     return <div className="text-center ">
 <h1 className="text-center">USERS</h1>
