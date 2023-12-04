@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import { Drawer } from './ui/drawer'
+
 import Link from 'next/link'
-import { Footer } from './ui/footer'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,15 +20,14 @@ export default function RootLayout({
   return (
     <html  lang="en">
       <body className={inter.className}>
+        <Link href='/'>Main</Link>
+        <Link href='/users'>Users</Link>
+        <h1 className='bg-[lightblue] text-white'>THIS IS THE TEXT</h1>
         <div className="p-3">{children}</div>
   
 
-     <Drawer><>
-     
-    <Link href="users">USERS</Link>
-     </></Drawer>
     
-      <Footer/>
+      
  
       </body>
 
