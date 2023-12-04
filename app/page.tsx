@@ -11,12 +11,12 @@ export interface Props{
   
 }
 export default async function Home() {
-let data:Props[]=await server()
-const Data=()=>{return data.map(m=><h2 key={m.id} className='border-[2px] border-[red] w-[200px] p-[10px]'>{m.name}</h2>)}
+
+
   return (
     <main className="text-center ">
 <div className="flex flex-wrap gap-10">
-  <Data/>
+ <h1>THE MAIN PAGE </h1>
 </div>
     </main>
   )
